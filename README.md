@@ -20,3 +20,12 @@ This file requires to be made by the user. This file will contain a dictionary w
 
 * key = the name of the folder where images of the same class had been grouped together
 * value = the true name/identity of the class
+
+# Software and Libraries
+
+This project uses the following software and Python libraries:
+
+* Python
+* NumPy
+* Pytorch
+
