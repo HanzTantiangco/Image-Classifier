@@ -6,12 +6,27 @@ import json
 import torch.nn.functional as F
 
 def model_test(model, criterion, test_loader, validation_loader):
+    """
+    Tests the trained network's accuracy using the test dataset, images the
+    test_network has not seen.
+
+    Args:
+    model: Loads the trained model.
+    criterion: Loads the the loss function used for the training.
+    test_loader: Loads the test dataset from data_loader.py
+    validation_loader: Loads the validation dataset from data_loader.py
+
+    Returns:
+    test_accuracy
+    """
+
+
     accuracy = 0
     model.eval()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
-    
+
     with torch.no_grad():
         for inputs, labels in test_loader:
             inputs, labels = inputs.cuda(device), labels.cuda(device)
