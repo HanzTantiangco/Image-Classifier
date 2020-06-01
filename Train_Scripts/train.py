@@ -35,9 +35,9 @@ from model_checkpoint import model_checkpoint
 
 def main():
     """
-    Runs the different modules together
+    Runs the different modules together.
     """
-    # Retrieves Comman Line Arguments from user as input from the user running
+    # Retrieves Command Line Arguments from user as input from the user running
     # the program from a terminal window
     in_arg = get_input_args()
 
