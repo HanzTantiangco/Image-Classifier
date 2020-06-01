@@ -21,17 +21,18 @@ def get_input_args():
     parser = argparse.ArgumentParser(description='Prepare for training.')
 
     # Arguments
-    parser.add_argument('--save_dir', type = str, default =
-    '/home/workspace/ImageClassifier/flowers', help = 'Set directory')
+    parser.add_argument('--save_dir', type = str, 
+                        default = '/home/workspace/ImageClassifier/flowers',
+                        help = 'Set directory')
     parser.add_argument('--arch', type = str, default = 'densenet121',
-    help = 'Choose architecture')
+                        help = 'Choose architecture')
     parser.add_argument('--learning_rate', type = float, default = 0.001,
-    help = 'Choose learning rate')
-    parser.add_argument('--hidden_unit', type = int, default = 500, help =
-    'Choose number of hidden units')
-    parser.add_argument('--epochs', type = int, default = 5, help =
-    'Choose number of epochs')
-    parser.add_argument('--gpu', type = bool, default=True, help =
-    'Choose GPU for training')
+                        help = 'Choose learning rate')
+    parser.add_argument('--hidden_unit', type = int, default = 500,
+                        help = 'Choose number of hidden units')
+    parser.add_argument('--epochs', type = int, default = 5,
+                        help = 'Choose number of epochs')
+    parser.add_argument('--gpu', type = bool, default=True,
+                        help = 'Choose GPU for training')
 
     return parser.parse_args()
