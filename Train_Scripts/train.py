@@ -56,7 +56,7 @@ def main():
 
     # Trains model
     model, criterion = model_train(model, train_loader, validation_loader,
-    in_arg.learning_rate, in_arg.epochs)
+                                   in_arg.learning_rate, in_arg.epochs)
 
     # Tests models against a validation dataset
     model_test(model, criterion, test_loader, validation_loader)
