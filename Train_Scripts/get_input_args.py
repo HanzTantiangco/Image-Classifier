@@ -1,27 +1,26 @@
-## Model architecture
-# The training script allows users to choose from at least two different
-# architectures available from torchvision.models
-
-## Model hyperparameters
-# The training script allows users to set hyperparameters for learning rate,
-# number of hidden units, and training epochs
-
-## Training with GPU
-# The training script allows users to choose training the model on a GPU
-
 import argparse
 
 def get_input_args():
     """
     This function takes a user input and returns a data structure which stores
-    the command line arguments
+    the command line arguments.
+    Model architecture:
+     The training script allows users to choose from at least two different
+     a0rchitectures available from torchvision.models
+
+    Model hyperparameters
+    The training script allows users to set hyperparameters for learning rate,
+     number of hidden units, and training epochs
+
+    Training with GPU
+    The training script allows users to choose training the model on a GPU
     """
 
     # Create parser using ArgumentParser
     parser = argparse.ArgumentParser(description='Prepare for training.')
 
     # Arguments
-    parser.add_argument('--save_dir', type = str, 
+    parser.add_argument('--save_dir', type = str,
                         default = '/home/workspace/ImageClassifier/flowers',
                         help = 'Set directory')
     parser.add_argument('--arch', type = str, default = 'densenet121',
