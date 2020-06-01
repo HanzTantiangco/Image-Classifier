@@ -1,4 +1,2 @@
 cat_to_name.json
 checkpoint.pth
-model_load_checkpoint.py
-helper.py
