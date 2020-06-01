@@ -13,14 +13,6 @@
 #                           --hidden_unit 500 --epochs 5 --gpu True
 ##
 
-# Imports python modules
-import torch
-from torch import nn
-from torch import optim
-from torchvision import datasets, transforms, models
-import json
-import torch.nn.functional as F
-
 # Imports functions created for this program
 from get_input_args import get_input_args
 from data_loader import data_loader
