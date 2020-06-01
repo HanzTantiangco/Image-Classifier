@@ -42,8 +42,7 @@ def main():
     in_arg = get_input_args()
 
     # Loads the dataset into different variables
-    train_data, validation_data, test_data, train_loader, validation_loader,
-    test_loader, cat_to_name = data_loader(in_arg.save_dir)
+    train_data, validation_data, test_data, train_loader, validation_loader, test_loader, cat_to_name = data_loader(in_arg.save_dir)
 
     # Generates deep learning model
     model = model_loader(in_arg.arch, in_arg.hidden_unit)
