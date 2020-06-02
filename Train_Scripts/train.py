@@ -13,14 +13,6 @@
 #                           --hidden_unit 500 --epochs 5 --gpu True
 ##
 
-# Imports python modules
-import torch
-from torch import nn
-from torch import optim
-from torchvision import datasets, transforms, models
-import json
-import torch.nn.functional as F
-
 # Imports functions created for this program
 from get_input_args import get_input_args
 from data_loader import data_loader
@@ -35,15 +27,14 @@ from model_checkpoint import model_checkpoint
 
 def main():
     """
-    Runs the different modules together
+    Runs the different modules together.
     """
-    # Retrieves Comman Line Arguments from user as input from the user running
+    # Retrieves Command Line Arguments from user as input from the user running
     # the program from a terminal window
     in_arg = get_input_args()
 
     # Loads the dataset into different variables
-    train_data, validation_data, test_data, train_loader, validation_loader,
-    test_loader, cat_to_name = data_loader(in_arg.save_dir)
+    train_data, validation_data, test_data, train_loader, validation_loader, test_loader, cat_to_name = data_loader(in_arg.save_dir)
 
     # Generates deep learning model
     model = model_loader(in_arg.arch, in_arg.hidden_unit)
@@ -56,7 +47,7 @@ def main():
 
     # Trains model
     model, criterion = model_train(model, train_loader, validation_loader,
-    in_arg.learning_rate, in_arg.epochs)
+                                   in_arg.learning_rate, in_arg.epochs)
 
     # Tests models against a validation dataset
     model_test(model, criterion, test_loader, validation_loader)

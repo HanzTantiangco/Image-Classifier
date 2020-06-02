@@ -15,16 +15,6 @@
 #
 ##
 
-#Imports modules
-import numpy as np
-import torch
-from torch import nn
-from torch import optim
-from torchvision import datasets, transforms, models
-import json
-import torch.nn.functional as F
-from PIL import Image
-
 # Imports functions created for this program
 from get_input_args import get_input_args
 from model_load import model_load
